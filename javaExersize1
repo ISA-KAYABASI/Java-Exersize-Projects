@@ -1,0 +1,547 @@
+package exersizeWith;
+
+import java.util.Random;
+import java.util.Scanner;
+
+
+public class exersizeTime1 {
+
+    //Print first code with my name
+    public static void main(String[] args) {
+
+String value1= "isa";
+String value2="kayabasi";
+        System.out.println(value1+" "+value2);
+
+    }
+    }
+class exersizeTime2{
+
+        public static void main(String[] args) {
+
+            //Basic math algorithm
+            int num1=5;
+            String ss="5";
+
+            ss=ss+ss;
+            num1 = num1+num1;
+
+            System.out.println("ss = " + ss);
+            System.out.println("num1 = " + num1);
+        }
+    }
+
+class exersizeTime3{
+    public static void main(String[] args) {
+
+        //calculating basic math algorithm
+        int num1=5;
+        String ss="5";
+        double sayi;
+
+        ss= ss + ss;
+        num1 = num1*5 / 3;
+        sayi = num1* 5.0 / 3;
+
+        System.out.println("ss = " + ss);
+        System.out.println("num1 = " + num1);
+        System.out.println("sayi = " + sayi);
+
+
+    }
+}
+class exersizeTime4{
+    public static void main(String[] args) {
+
+        //Write algorithm that find 2 random number between 0-50 and turn it to degre for 2 country and get avarage
+        int jesus1=(int)(Math.random()*50+1);
+        int jesus2=(int)(Math.random()*50+1);
+
+
+        int result1=((jesus1*9)/5+32);
+        int result2=((jesus2*9)/5+32);
+        int general= (result2+result1)/2;
+        System.out.println("In USA weather is = " + result2+"degre.");
+        System.out.println("In TURKEY weather is = " + result1+"degre.");
+        System.out.println("In the world weather is = " + general+" degre.");
+    }
+}
+class exersizeTime5{
+    public static void main(String[] args) {
+
+        //there is 2 brother and given their ages 2 year later what age they will be
+        int littleBrother=14;
+        int bigBrother=18;
+        int totalAge;
+        littleBrother=littleBrother+2;
+        bigBrother=bigBrother+2;
+
+        totalAge=littleBrother+bigBrother;
+        System.out.println("totalAge = " + totalAge);
+    }
+}
+
+class exersizeTime6{
+    public static void main(String[] args) {
+
+        //Write algorithm that gives 3 different random number and find their avarage.
+
+        int sayi1=(int)(Math.random()*100+1);
+        int sayi2=(int)(Math.random()*100+1);
+        int sayi3=(int)(Math.random()*100+1);
+
+        int result=(sayi1+sayi2+sayi3)/3;
+        System.out.println("sayi1 = " + sayi1);
+        System.out.println("sayi2 = " + sayi2);
+        System.out.println("sayi3 = " + sayi3);
+        System.out.println("3 sayinin ortalamasi = " + result);
+    }
+}
+
+
+class exersizeTime7{
+    public static void main(String[] args) {
+        // get a value and get its square
+
+        Scanner value1=new Scanner(System.in);
+        System.out.println("Please enter a number : ");
+        int value2= value1.nextInt();
+        int value3=(value2*value2);
+        System.out.println("Girilen rakam = " + value2);
+        System.out.println("Girilen rakamin karesi = " + value3);
+    }
+}
+
+class exersizeTime8{
+    public static void main(String[] args) {
+
+         //String values
+
+        String value1 = "Isa KAYABASI";
+        System.out.println("value1 = Isa KAYABASI = " + value1);
+        int number;
+        number= value1.length();
+        System.out.println("Value's character number = " + number);
+
+        String cutting1=value1.substring(0,4);
+        System.out.println("It will give the name without lastname = " + cutting1);
+
+        String cutting2=value1.substring(4,value1.length());
+        System.out.println("Lastname without name = " + cutting2);
+
+    }
+}
+
+class exersizeTime9{
+    public static void main(String[] args) {
+        //Replacement
+        String value1="KAYABASI ISA";
+        System.out.println("value1 = " + value1);
+
+        value1=value1.replace("ISA", "ASI");
+        System.out.println("Name is changed = " + value1);
+    }
+}
+
+class exersizeTime10{
+    public static void main(String[] args) {
+
+        //Trying to find the place int the string
+
+        String value1= "Welcome us";
+        int number1;
+        number1=value1.indexOf(" ");
+        System.out.println("Our writed value = " + value1);
+        System.out.println("It will show space place = " + number1);
+
+        //We will take all we have until our .indexOf() place
+        String value2=value1.substring(0,number1);
+        System.out.println("It will write from 0 index to number 7 space index  = " + value2);
+
+        String value3=value1.substring(7,value1.length());
+        System.out.println("After space index until the end it will write = " + value3);
+
+    }
+}
+class exersizeTime11{
+    public static void main(String[] args) {
+
+        double piNumber=Math.PI;
+        double randomNumber=Math.random()*10+1;
+        int ranDomValue=(int)(piNumber+randomNumber);
+        System.out.println("ranDomValue = " + ranDomValue);
+    }
+}
+
+class exersizeTime12{
+    public static void main(String[] args) {
+        //Get 2 number after divide them to eachother is it positif or negative
+
+        Scanner number1=new Scanner(System.in);
+        System.out.println("Please enter a number = ");
+        int value1= number1.nextInt();
+        System.out.println("value1 = " + value1);
+
+        Scanner number2=new Scanner(System.in);
+        System.out.println("Please enter another number = ");
+        int value2= number2.nextInt();
+        System.out.println("value2 = " + value2);
+
+        double dividedNumber=value1/value2;
+
+        String result= (dividedNumber%2==0)? "Cifttir": "Tektir";
+        System.out.println("Result = " + result);
+
+    }
+}
+
+class exersizeTime13{
+    public static void main(String[] args) {
+
+        // If else
+        int value1= (int) (Math.random()*15+1);
+        System.out.println("random number = " + value1);
+
+        if (value1<10) {
+            System.out.println("Our number smaller than 10");
+
+        }else {
+            System.out.println("Our number bigger than 10");
+        }
+
+    }
+}
+
+class exersizeTime14{
+    public static void main(String[] args) {
+
+        int value1 = 6;
+
+        if (value1 < 7) value1=value1+1; value1=value1+5;
+        System.out.println("value1 = " + value1);
+    }
+}
+
+class exersizeTime15{
+    public static void main(String[] args) {
+
+        int value=(int)(Math.random()*100+1);
+        System.out.println("Random number = " + value);
+
+        if(value>60){
+            System.out.println("Succesfully finished number between 100 and 60");
+        } else if (value>30) {
+            System.out.println("Your point is between 30 and 60");
+
+        }else {
+            System.out.println("Your point between 0 and 30");
+        }
+    }
+}
+
+class exersizeTime16{
+    public static void main(String[] args) {
+
+        Scanner bro1=new Scanner(System.in);
+        System.out.println("Please enter a number :");
+        int bro11= bro1.nextInt();
+        System.out.println("bro11 = " + bro1);
+
+        Scanner bro2=new Scanner(System.in);
+        System.out.println("Please enter a number :");
+        int bro22=bro2.nextInt();
+        System.out.println("bro22 = " + bro2);
+
+        Scanner bro3=new Scanner(System.in);
+        System.out.println("Please enter a number :");
+        int bro33= bro3.nextInt();
+        System.out.println("bro11 = " + bro3);
+
+        if(bro11>bro22){
+            if(bro11>bro33){
+                System.out.println("biggest brother 1");
+        }else {
+                System.out.println("biggest brother 3");
+            }
+        } else{
+           if (bro33>bro22)
+      {
+            System.out.println("biggest brother 3");
+        }else {
+               System.out.println("biggest brother 2");
+           }
+
+    }
+    }
+}
+
+class exersizeTime17{
+    public static void main(String[] args) {
+        int test1 = (int) (Math.random() * 100 + 1);
+        int test2 = (int) (Math.random() * 100 + 1);
+        int finalNote = (int) (Math.random() * 100 + 1);
+        int passingNotu = (int) (test1 * 0.25 + test2 * 0.25 + finalNote * 0.50);
+
+
+        int test1t = (int) (Math.random() * 100 + 1);
+        int test2t = (int) (Math.random() * 100 + 1);
+        int finalNotet = (int) (Math.random() * 100 + 1);
+        int passingNotut = (int) (test1t * 0.25 + test2t * 0.25 + finalNotet * 0.50);
+
+        int ortalama2 = (passingNotu + passingNotut) / 2;
+
+        System.out.println("vize1 = " + test1);
+        System.out.println("vize2 = " + test2);
+        System.out.println("finalNote = " + finalNote);
+        System.out.println("gecmeNotu = " + passingNotu);
+
+        if (passingNotu < ortalama2) {
+            System.out.println("result failed");
+        } else {
+            System.out.println("succesfully completed ");
+        }
+        System.out.println("vize1 = " + test1t);
+        System.out.println("vize2 = " + test2t);
+        System.out.println("finalNote = " + finalNotet);
+        System.out.println("gecmeNotu = " + passingNotut);
+
+        if (passingNotut < ortalama2) {
+            System.out.println("you are not able to give true respond the questin try later");
+        } else {
+            System.out.println("your answer is correct passed");
+        }
+        System.out.println("avarage passing note " + ortalama2);
+    }
+}
+
+class exersizeTime18{
+    public static void main(String[] args) {
+
+
+        Scanner bro1=new Scanner(System.in);
+        System.out.println("Please enter a number :");
+        int bro11= bro1.nextInt();
+        System.out.println("bro1 = " + bro1);
+
+        Scanner bro2=new Scanner(System.in);
+        System.out.println("Please enter a number :");
+        int bro22=bro2.nextInt();
+        System.out.println("bro2 = " + bro2);
+
+        Scanner bro3=new Scanner(System.in);
+        System.out.println("Please enter a number :");
+        int bro33= bro3.nextInt();
+        System.out.println("bro1 = " + bro3);
+
+        if (bro11>bro22 && bro11>bro33) System.out.println("bro1 is the biggest brother");
+        if (bro22>bro11 && bro22>bro33) System.out.println("bro2 is the biggest brother");
+        if (bro33>bro22 && bro33>bro11) System.out.println("bro3 is the biggest brother");
+    }
+}
+
+class exersizeTime19{
+    public static void main(String[] args) {
+
+        int value1= (int) (Math.random()*100+1);
+        System.out.println("first value" + value1);
+        if (value1>0) System.out.println("pozitiftir= " + value1);
+        if (value1<0) System.out.println("negative= " + value1);
+        if (value1==0) System.out.println("notur= " + value1);
+    }
+}
+
+class exersizeTime20{
+    public static void main(String[] args) {
+        int n=10;
+        int total=0;
+        int i = 1;
+
+        do {
+            total = total + i;
+            i++;
+        }while(i<n+1);
+        System.out.println("total = " + total);
+    }
+}
+
+class exersizeTime21{
+    public static void main(String[] args) {
+
+        int total = 0;
+        int avarage;
+        int number=0;
+
+        for (int i = 0; i <10 ; i++) {
+            Scanner value=new Scanner(System.in);
+            System.out.println("Please enter a number : ");
+            int value1=value.nextInt();
+            number++;
+
+            total=total+value1;
+            System.out.println("total = " + total);
+        }
+        avarage=total/number;
+        System.out.println("avarage = " + avarage);
+    }
+}
+
+class exersizeTime22{
+    public static void main(String[] args) {
+
+        //printing line before space
+
+        Scanner id=new Scanner(System.in);
+        System.out.println("please enter a name and lastname");
+        String str=id.next();
+        System.out.println("name = " + str);
+    }
+}
+
+class exersizeTime23{
+    public static void main(String[] args) {
+
+        // there is two number its x and y, between that numbers calculate which ones is getting divide 3 without remaining
+        // than  sum them
+
+        int ciftSayi=0;
+        int tekSayi=0;
+
+        int x=2;
+        int y=6;
+        for (x = x+1; x < y; x++) {
+
+           if (x%3==0) {
+
+                tekSayi=tekSayi+x;
+           }else
+               ciftSayi=ciftSayi+x;
+        }
+        System.out.println("divided by 3 without any remaining = " + tekSayi);
+        System.out.println("not able to divide 3 and sum them = " + ciftSayi);
+    }
+}
+
+class exersizeTime24{
+    public static void main(String[] args) {
+
+        int num=5;
+        int faktoryel=1;
+        for(int i = 1; i<num+1 ; i++){
+            faktoryel = faktoryel*i;
+        }
+        System.out.println("faktoryel = " + faktoryel);
+    }
+}
+
+class exersizeTime25{
+    public static void main(String[] args) {
+
+        int random1= (int) (Math.random()*3);
+        int random2= (int) (Math.random()*3);
+
+        while(random1==random2){
+
+            System.out.println("Numbers is same bring another random number");
+            random1= (int) (Math.random()*3);
+            random2= (int) (Math.random()*3);
+        }
+        System.out.println("random1 = " + random1);
+        System.out.println("random2 = " + random2);
+        System.out.println("numbers is usefull and its not same");
+    }
+}
+class exersizeTime26{
+    public static void main(String[] args) {
+
+        Scanner scan=new Scanner(System.in);
+        int haveTotal = 10;
+        int total = 0;
+        int sum;
+        double avarage;
+        int not;
+
+        for (int i = 0; i <haveTotal ; i++) {
+
+            not=scan.nextInt();
+            total= total+not;
+        }
+    }
+}
+
+class exersizeTime27{
+    public static void main(String[] args) {
+
+        double sayi1=3.2148151444627;
+
+        System.out.printf("%10.2f",sayi1);
+    }
+}
+
+class exersizeTime28{
+    public static void main(String[] args) {
+
+        // Arrays
+
+        int sayi1=2;
+        int[] arraYs= new int[]{44,66,5,4,234,634,43};
+        int i = 2;
+        arraYs [i]=arraYs[1+1]+arraYs[5];
+        System.out.println(arraYs[4]);
+    }
+}
+
+class exersizeTime29{
+    public static void main(String[] args) {
+
+        int [] arrays= new int[]{4,5,7,1,8};
+        arraysCreate(arrays);
+        arrayscalculate(arrays);
+        int totalL=0;
+    }
+    private static void arrayscalculate(int[] arrays) {
+        int totalL=0;
+        for (int i = 0; i < arrays.length; i++) {
+
+            totalL = totalL+arrays[i];
+        }
+        System.out.println("totalL = " + totalL);
+    }
+    private static void arraysCreate(int[] arrays) {
+        for (int i = 0; i < arrays.length ; i++) {
+            System.out.printf("%5d",arrays[i]);
+        }
+    }
+}
+
+class exersizeTime30{
+    public static void main(String[] args) {
+        // try catch finally
+
+        Scanner read=new Scanner(System.in);
+
+        System.out.println("Please enter a number");
+
+        try{
+            int number1=read.nextInt();
+
+        }catch (Exception e){
+            System.out.println("e = " + e);
+            System.out.println("Error");
+        }finally {
+            System.out.println("try catch is end");
+        }
+        System.out.println("program is done");
+    }
+}
+
+class exersizeTime31{
+    public static void main(String[] args) {
+
+        int[] arrays = new int[]{1,2,3,4,5,6,7};
+        int total=0;
+        for (int i = 0; i < arrays.length; i++) {
+            total+=arrays[i];
+
+        } System.out.println("total = " + total);
+    }
+}
