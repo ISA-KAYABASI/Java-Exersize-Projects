@@ -1,0 +1,85 @@
+package EmployeeExample;
+
+public class EmpDriver {
+    public static void main(String[] args) {
+
+        Employee emp1 = new Employee(1985,45,2000.0,"Kemal");
+        emp1.toString(emp1);
+
+
+        System.out.println("**************************");
+
+        Employee emp2 = new Employee(2010,55,1500.0,"Ahmet");
+        emp2.toString(emp2);
+
+        System.out.println("**************************");
+
+
+        Employee emp3 = new Employee(2015,35,1700.0,"john");
+        emp3.toString(emp3);
+
+
+    }
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+package EmployeeExample;
+
+public class Employee {
+
+    private String  name;
+    public double salary;
+    private int workhours,hireYear;
+
+    Employee(int hireYear,int workhours,double salary,String name){
+        this.name = name;
+        this.salary= salary;
+        this.workhours=workhours;
+        this.hireYear=hireYear;
+    }
+
+    public double tax(){
+        if (this.salary>=1000){
+            return salary*0.03;
+        }
+        return 0.0;
+    }
+
+    public double bonus(){
+        int exstraHours = this.workhours - 40;
+        if(exstraHours > 0){
+        return 30 * exstraHours;
+        }
+        return  0.0;
+
+
+    }
+
+    public double increase(){
+        int year = 2020 - this.hireYear;
+        if (year < 10){
+            return salary*0.5;
+        } else if (year>=10&& year<20) {
+            return salary * 0.10;
+        }else{
+            return salary *0.15;
+        }
+    }
+
+    public void toString(Employee emp){
+
+        System.out.println("tax :" +emp.tax());
+
+        System.out.println("Bonus : "+emp.bonus());
+
+        System.out.println("Increase :"+emp.increase());
+
+        double totalSalary = emp.salary - emp.tax() + emp.bonus();
+        System.out.println("Total salary : "+totalSalary);
+
+        System.out.println("Total raise of the salary : "+(totalSalary+ emp.increase()));
+    }
+}
