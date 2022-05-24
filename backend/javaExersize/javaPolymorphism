@@ -1,0 +1,145 @@
+package polymorphismJava;
+
+public class main3 {
+    public static void main(String[] args) {
+
+        // Polymorphism cok bicimlilik birden fazla fonksiyonu farkli tanilar vererek main class ta cagirdik ve farkli sonuclar aldik
+
+        person3 std;
+        std = new student3("123142","isa","kayabasi","24","35g");
+
+        std.show();
+
+        std = new teacher3("123142","isa","kayabasi","24","35g");
+
+        std.show();
+
+    }
+}
+
+///////////////////////////////////////////////////////////////////////////////////
+
+
+package polymorphismJava;
+
+public class person3 {
+
+    private String TCKimlik;
+    private String ad;
+    private String soyad;
+
+    public void show(){
+        System.out.println("Kisi metodu show metodu calisti");
+    }
+
+    public person3(String TCKimlik, String ad, String soyad) {
+        this.TCKimlik = TCKimlik;
+        this.ad = ad;
+        this.soyad = soyad;
+    }
+
+
+
+    public String getTCKimlik() {
+        return TCKimlik;
+    }
+
+    public void setTCKimlik(String TCKimlik) {
+        this.TCKimlik = TCKimlik;
+    }
+
+    public String getAd() {
+        return ad;
+    }
+
+    public void setAd(String ad) {
+        this.ad = ad;
+    }
+
+    public String getSoyad() {
+        return soyad;
+    }
+
+    public void setSoyad(String soyad) {
+        this.soyad = soyad;
+    }
+}
+///////////////////////////////////////////////////////////////////////////
+
+package polymorphismJava;
+
+import inheritanceJava2.person1;
+
+public class student3 extends person3 {
+
+    private String StudentNo;
+    private String place;
+
+
+    @Override
+    public void show(){
+        System.out.println("ogrenci show metodu calisti");
+    }
+
+    public student3(String TCKimlik, String ad, String soyad, String studentNo, String place) {
+        super(TCKimlik, ad, soyad);
+        StudentNo = studentNo;
+        this.place = place;
+    }
+
+    public String getStudentNo() {
+        return StudentNo;
+    }
+
+    public void setStudentNo(String studentNo) {
+        StudentNo = studentNo;
+    }
+
+    public String getPlace() {
+        return place;
+    }
+
+    public void setPlace(String place) {
+        this.place = place;
+    }
+}
+//////////////////////////////////////////////////////////////////////////////
+
+
+package polymorphismJava;
+
+public class teacher3 extends person3 {
+
+    String branch;
+    String salary;
+
+
+
+    @Override
+    public void show(){
+        System.out.println("ogretmen show metodu calisti");
+    }
+
+    public teacher3(String TCKimlik, String ad, String soyad, String branch, String salary) {
+        super(TCKimlik, ad, soyad);
+        this.branch = branch;
+        this.salary = salary;
+    }
+
+    public String getBranch() {
+        return branch;
+    }
+
+    public void setBranch(String branch) {
+        this.branch = branch;
+    }
+
+    public String getSalary() {
+        return salary;
+    }
+
+    public void setSalary(String salary) {
+        this.salary = salary;
+    }
+}
+

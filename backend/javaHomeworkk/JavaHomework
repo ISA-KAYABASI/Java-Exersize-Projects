@@ -1,0 +1,172 @@
+package homework;
+
+import java.util.Arrays;
+import java.util.Date;
+import java.util.Scanner;
+
+public class homework4 {
+
+                           // Soru: -5.9 sayısını aşağıdaki işlemleri yapalım
+
+    public static void main(String[] args) {
+
+               // 1-mutlak değeri alsın 5.9
+
+               double deger1 = -5.9;
+
+
+               double deger2=Math.abs(deger1);
+               System.out.println(deger2);
+
+                // 2-yuvarlama yapsın  6.0
+
+               double deger3=Math.round(deger2);
+               System.out.println(deger3);
+
+                // 3-karesini alsın 36.00
+
+                double deger4=Math.pow(deger3,2);
+                System.out.println(deger4);
+
+                // 4-karekök alsın  6.0
+
+                double deger5=Math.sqrt(deger4);
+                System.out.println(deger5);
+
+                // 6-)çıkan sonucu 5 bölsün 6/5=1
+
+                double deger6=deger5/5;
+                System.out.println(deger6);
+
+                // 7-) iki sayı arasından karşılaştırma yapsın en küçüğünü alsın ve 1 ve 5
+
+               int[] sayilar = new int[5];
+               sayilar[0]= 1;
+               sayilar[1]= 12;
+               sayilar[2]= 25;
+               sayilar[3]= 984;
+               sayilar[4]= 5;
+
+               Arrays.sort(sayilar);
+               for (int sayiDegeri :sayilar){
+                   System.out.println(sayiDegeri + " ");
+
+
+               }
+
+
+
+
+                //8-) küçük sayı eğer tekse 3 eklesin çiftse 5 eklesin
+
+                Scanner alinanDeger1=new Scanner(System.in);
+                System.out.println("Lutfen bir sayi giriniz");
+                int beklenenDeger1= alinanDeger1.nextInt();
+               System.out.println(beklenenDeger1);
+
+
+                 int kalan1=beklenenDeger1%2;
+               if (kalan1==0){
+                   int yeniSayi1=beklenenDeger1+5;
+                   System.out.println(yeniSayi1);
+               }else{
+                   int yeniSayi1=beklenenDeger1+3;
+                   System.out.println(yeniSayi1);
+               }
+
+
+
+                // // 9-) alinan degerlerin uslunu göstersin
+
+                Scanner taban1=new Scanner(System.in);
+                System.out.println("Bir taban sayisi giriniz.");
+                int tabanSayi= taban1.nextInt();
+
+
+                Scanner usDeger=new Scanner(System.in);
+                System.out.println("Bir rakam giriniz.");
+                int usSayi= usDeger.nextInt();
+                
+                System.out.println(Math.pow(tabanSayi,usSayi)+" verilen degerin ussu alinmistir.");
+
+
+
+
+                  // Verilen bir sayının negatif mi pozitif mi oldugunu gosteren bir algoritma yapin
+
+                Scanner pozitifmi=new Scanner(System.in);
+                System.out.println("Lutfen bir deger giriniz:");
+                int sayiSayi=pozitifmi.nextInt();
+                String  result5 = (sayiSayi>=0) ? "Sayi pozitiftir": "Sayi negatiftir";
+                System.out.println(result5);
+
+
+
+             // Soru
+             // kullanıcının girdiğini sayıya kadar olan sayılardan;
+             //  kaçtane sayı var
+            //  bu sayılardan kaç tane tek sayı var
+            //  bu sayılardan kaç tane çift sayı var
+            //  bu sayıların toplamı
+
+
+        Scanner kullaniciSayi=new Scanner(System.in);
+        System.out.println("Bir sayi giriniz: ");
+        int kSayi=kullaniciSayi.nextInt();
+        int toplam=0;
+        int sayiAdedi=0;
+        int tekSayi1=0;
+        int ciftSayi1=0;
+        int result=0;
+
+
+        for(int i=1; i<=kSayi; i++){
+            toplam+=i;
+            sayiAdedi++;
+
+            result = (i%2==0) ? ciftSayi1++ :tekSayi1++;
+
+        }
+        System.out.println("Sayilarin toplami:"+toplam);
+        System.out.println("Sayi adedi:"+sayiAdedi);
+        System.out.println("Tek sayi adedi: "+tekSayi1);
+        System.out.println("Cift sayi adedi: "+ciftSayi1);
+
+
+
+                  //Date objesinden haftanın hangi gün olduğunu bulan algoritma ?
+
+
+
+        Date gun1= new Date();
+        System.out.println(gun1.getDay());
+
+       int bugun1=gun1.getDay();
+        System.out.println(bugun1);
+
+        if (bugun1==6){
+            System.out.println("Gunlerden cumartesi");
+        }else if (bugun1==0){
+            System.out.println("Gunlerden pazar");
+
+        }else if (bugun1==1){
+            System.out.println("Gunlerden pazartesi");
+
+        }else if (bugun1==2){
+            System.out.println("Gunlerden sali");
+
+        }else if (bugun1==3){
+            System.out.println("Gunlerden carsamba");
+
+        }else if (bugun1==4){
+            System.out.println("Gunlerden persembe");
+
+        }else if (bugun1==5){
+            System.out.println("Gunlerden cuma");
+
+        }
+
+        
+
+    }
+}

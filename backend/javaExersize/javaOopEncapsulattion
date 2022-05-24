@@ -1,0 +1,159 @@
+package enCapsulationSarmalama;
+
+import java.util.ArrayList;
+
+public class oopMainMain {
+    public static void main(String[] args) {
+
+
+        ArrayList<sadres>adrList=new ArrayList<>();
+
+        sadres adr=new sadres();
+        oopStudentT std=new oopStudentT();
+
+
+        adr.setCadde("astiklal");
+        adr.setBlok("A");
+        adr.setSehir("istanbul");
+
+        std.setAdi("isa");
+        std.setSoyadi("kayabasi");
+        std.setSadres(adr);
+
+        adrList.add(adr);  /// //  // / // /
+
+
+        adr=new sadres();  ///// / / / // / / /
+        adr.setCadde("astiklal2");
+        adr.setBlok("A2");
+        adr.setSehir("istanbul2");
+
+        adrList.add(adr);
+
+        System.out.println(adrList.get(0).getCadde()); //birinciden aldim
+        System.out.println(adrList.get(1).getCadde());  // ikinciden aldim
+
+
+
+    }
+}
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+package enCapsulationSarmalama;
+
+public class oopStudentT {
+    private String adi;
+    private String soyadi;
+    private sadres sadres;
+
+    private String teacherClass;
+
+
+    public oopStudentT() {}
+
+    public oopStudentT(String adi, String soyadi, enCapsulationSarmalama.sadres sadres, String teacherClass) {
+        this.adi = adi;
+        this.soyadi = soyadi;
+        this.sadres = sadres;
+        this.teacherClass = teacherClass;
+    }
+
+    public String getAdi() {
+        return adi;
+    }
+
+    public void setAdi(String adi) {
+        this.adi = adi;
+    }
+
+    public String getSoyadi() {
+        return soyadi;
+    }
+
+    public void setSoyadi(String soyadi) {
+        this.soyadi = soyadi;
+    }
+
+    public enCapsulationSarmalama.sadres getSadres() {
+        return sadres;
+    }
+
+    public void setSadres(enCapsulationSarmalama.sadres sadres) {
+        this.sadres = sadres;
+    }
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+package enCapsulationSarmalama;
+
+import java.util.Locale;
+
+public class sadres {
+    private String cadde;  // private yaptik artik burasi disinda kullanmak icin method yapmamiz lazim
+    private String blok;
+    private String no;
+    private String sehir;
+    private String ulke;
+
+
+
+
+
+
+    public sadres() {}
+
+    public sadres(String cadde, String blok, String no, String sehir, String ulke) {
+        this.cadde = cadde;
+        this.blok = blok;
+        this.no = no;
+        this.sehir = sehir;
+        this.ulke = ulke;
+    }
+
+
+
+    public String getCadde() {
+        return cadde;
+    }
+
+    public void setCadde(String cadde) {
+        cadde=cadde.substring(0,1).toUpperCase()+cadde.substring(1);  // cadde icin olan ilk degerini buyuk yapar
+        this.cadde = cadde;
+    }
+
+    public String getBlok() {
+        return blok;
+    }
+
+    public void setBlok(String blok) {
+        this.blok = blok;
+    }
+
+    public String getNo() {
+        return no;
+    }
+
+    public void setNo(String no) {
+        this.no = no;
+    }
+
+    public String getSehir() {
+        return sehir;
+    }
+
+    public void setSehir(String sehir) {
+        this.sehir = sehir;
+    }
+
+    public String getUlke() {
+        return ulke;
+    }
+
+    public void setUlke(String ulke) {
+        this.ulke = ulke;
+    }
+}

@@ -1,8 +1,7 @@
-public class exersizeTime {
+package javaExersizeProjects;
 
+public class StudentGraduationNote {
     public static void main(String[] args) {
-
-
         int vize1 = (int) (Math.random() * 100 + 1);
         int vize2 = (int) (Math.random() * 100 + 1);
         int finalNote = (int) (Math.random() * 100 + 1);
@@ -39,6 +38,8 @@ public class exersizeTime {
         }
 
         System.out.println("Gecme notu ortalamasi " + ortalama2);
-        
+
     }
     }
+
+

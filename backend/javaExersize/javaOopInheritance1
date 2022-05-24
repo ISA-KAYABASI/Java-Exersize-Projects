@@ -1,0 +1,57 @@
+package inheritanceJAva;
+
+public class main {
+
+    public static void main(String[] args) {
+
+        Student std = new Student();
+        std.TCKimlik = "12156513153";
+        teacher tch=new teacher();
+        tch.salary = "17.500";
+
+        System.out.println("std.TCKimlik = "+ std.TCKimlik);
+        System.out.println("salary = " + tch.salary);
+    }
+}
+///////////////////////////////////////////////////////////////////////////////////
+
+package inheritanceJAva;
+
+public class adres {
+}
+
+///////////////////////////////////////////////////////////////////////////////////
+
+package inheritanceJAva;
+
+public class Person {
+
+
+    String TCKimlik;
+    String ad;
+    String soyad;
+    adres adres;
+}
+
+///////////////////////////////////////////////////////////////////////////////////
+package inheritanceJAva;
+
+public class Student extends Person {
+
+    String studentNo;
+    String sube;
+}
+
+///////////////////////////////////////////////////////////////////////////////////
+
+package inheritanceJAva;
+
+public class teacher extends Person {
+
+    String brach;
+    String salary;
+}
+
+
+
+

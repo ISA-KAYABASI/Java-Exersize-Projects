@@ -1,0 +1,100 @@
+package inheritanceJava2;
+
+public class main1 {
+    public static void main(String[] args) {
+
+        student1 std=new student1("123512312","isa","kayabasi","157898","tarsus");
+
+        System.out.println(std.getAd());
+
+
+        
+    }
+}
+////////////////////////////////////////////////////////////////////////////////
+
+
+package inheritanceJava2;
+
+public abstract class person1 {
+
+    private String TCKimlik;
+    private String ad;
+    private String soyad;
+
+    public person1(String TCKimlik, String ad, String soyad) {
+        this.TCKimlik = TCKimlik;
+        this.ad = ad;
+        this.soyad = soyad;
+    }
+
+
+    public String getTCKimlik() {
+        return TCKimlik;
+    }
+
+    public void setTCKimlik(String TCKimlik) {
+        this.TCKimlik = TCKimlik;
+    }
+
+    public String getAd() {
+        return ad;
+    }
+
+    public void setAd(String ad) {
+        this.ad = ad;
+    }
+
+    public String getSoyad() {
+        return soyad;
+    }
+
+    public void setSoyad(String soyad) {
+        this.soyad = soyad;
+    }
+
+    public abstract void show();
+}
+////////////////////////////////////////////////////////////////////
+
+
+package inheritanceJava2;
+
+public class student1 extends person1 {
+
+    private String StudentNo;
+    private String place;
+
+
+    public student1(String TCKimlik, String ad, String soyad, String studentNo, String place) {
+        super(TCKimlik, ad, soyad);
+        StudentNo = studentNo;
+        this.place = place;
+    }
+
+    public String getStudentNo() {
+        return StudentNo;
+    }
+
+    public void setStudentNo(String studentNo) {
+        StudentNo = studentNo;
+    }
+
+    public String getPlace() {
+        return place;
+    }
+
+    public void setPlace(String place) {
+        this.place = place;
+    }
+
+    @Override
+    public void show() {
+        System.out.println(this.StudentNo);
+        System.out.println(this.place);
+
+
+
+    }
+}
+

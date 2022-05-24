@@ -1,0 +1,112 @@
+package inheritanceJavaOverRiding;
+
+import inheritanceJava2.student1;
+
+public class main2 {
+    public static void main(String[] args) {
+
+       person2 person=new person2("tckimlik","isim","soyisim");
+       person.show();
+
+        System.out.println("---------------");
+
+       student2 std=new student2("tc","isa","kayabasi","231452","mersin");
+       std.show();
+
+    }
+}
+////////////////////////////////////////////////////////////////////////////////////
+
+
+package inheritanceJavaOverRiding;
+
+public class person2 {
+
+    private String TCKimlik;
+    private String ad;
+    private String soyad;
+
+    public person2(String TCKimlik, String ad, String soyad) {
+        this.TCKimlik = TCKimlik;
+        this.ad = ad;
+        this.soyad = soyad;
+    }
+
+    public void show(){
+        System.out.println(this.TCKimlik);
+        System.out.println(this.ad);
+        System.out.println(this.soyad);
+
+
+    }
+
+
+    public String getTCKimlik() {
+        return TCKimlik;
+    }
+
+    public void setTCKimlik(String TCKimlik) {
+        this.TCKimlik = TCKimlik;
+    }
+
+    public String getAd() {
+        return ad;
+    }
+
+    public void setAd(String ad) {
+        this.ad = ad;
+    }
+
+    public String getSoyad() {
+        return soyad;
+    }
+
+    public void setSoyad(String soyad) {
+        this.soyad = soyad;
+    }
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////
+
+
+package inheritanceJavaOverRiding;
+
+import inheritanceJava2.person1;
+
+public class student2 extends person2 {
+
+    private String StudentNo;
+    private String place;
+
+@Override
+public void show(){
+    //super show()
+    System.out.println(this.StudentNo);
+    System.out.println(this.place);
+
+}
+
+
+    public student2(String TCKimlik, String ad, String soyad, String studentNo, String place) {
+        super(TCKimlik, ad, soyad);
+        StudentNo = studentNo;
+        this.place = place;
+    }
+
+    public String getStudentNo() {
+        return StudentNo;
+    }
+
+    public void setStudentNo(String studentNo) {
+        StudentNo = studentNo;
+    }
+
+    public String getPlace() {
+        return place;
+    }
+
+    public void setPlace(String place) {
+        this.place = place;
+    }
+}
+
