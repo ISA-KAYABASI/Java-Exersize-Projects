@@ -1,0 +1,14 @@
+Write the Binary-Search-Tree stages of the sequence [7, 5, 1, 8, 3, 6, 0, 9, 4, 2].
+
+Example: root is x. y is found to the right of root. To its left is a z, etc.
+
+Response:
+root is 7. It has 5 on its left and 8 on its right.
+
+5 has 1 to the left and 6 to the right
+
+1 has 0 to the left and 3 to the right
+
+3 has 2 to the left and 4 to the right.
+
+To the right of 8 is 9.
