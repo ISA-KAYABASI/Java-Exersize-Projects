@@ -70,7 +70,7 @@ public class Student {
             System.out.println("Matematik Notu : " + this.mat.note);
             System.out.println("Fizik Notu : " + this.fizik.note);
             System.out.println("Kimya Notu : " + this.kimya.note);
-            System.out.println("verbalnote = " + verbalnote);
+            System.out.println("Verbalnote = " + verbalnote);
         }
 
     }
