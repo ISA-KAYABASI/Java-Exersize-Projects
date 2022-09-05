@@ -1,5 +1,7 @@
 package javaExersizeProjects.BoxsGame;
 
+import java.util.Random;
+
 public class Ring {
     Fighter f1;
     Fighter f2;
@@ -18,20 +20,39 @@ public class Ring {
         if (checkWeight()) {
             while (f1.health > 0 && f2.health > 0) {
                 System.out.println("======== YENİ ROUND ===========");
-                f2.health = f1.hit(f2);
-                if (isWin()){
-                    break;
+
+                Random rand = new Random();
+                int rastgele = rand.nextInt(2)+1;
+                System.out.println("rastgele = " + rastgele);
+
+                switch(rastgele){
+                    case 1:
+                        f1.health = f2.hit(f1);
+                        if (isWin()){
+                            break;
+                        }
+                        break;
+                    case 2:
+                        f2.health = f1.hit(f2);
+                        if (isWin()){
+                            break;
+                        }
+                        break;
+                    default:
+                        printScore();
+                        break;
                 }
-                f1.health = f2.hit(f1);
-                if (isWin()){
-                    break;
-                }
+
                 printScore();
             }
+
         } else {
             System.out.println("Sporcuların ağırlıkları uyuşmuyor.");
         }
+
+
     }
+
     public boolean checkWeight() {
         return (f1.weight >= minWeight && f1.weight <= maxWeight) && (f2.weight >= minWeight && f2.weight <= maxWeight);
     }
@@ -40,7 +61,7 @@ public class Ring {
             System.out.println("Maçı Kazanan : " + f2.name);
             return true;
         } else if (f2.health == 0){
-            System.out.println("Maçı Kazanan : " + f2.name);
+            System.out.println("Maçı Kazanan : " + f1.name);
             return true;
         }
 
