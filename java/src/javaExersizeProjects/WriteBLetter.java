@@ -1,6 +1,6 @@
 package javaExersizeProjects;
 
-public class WriteALetter {
+public class WriteBLetter {
     public static void main(String[] args) {
         String[][] letter = new String[6][4];
 
