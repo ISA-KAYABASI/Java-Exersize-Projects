@@ -1,4 +1,4 @@
-package javaExersizeProjects.BoxsGame;
+package javaExersizeProjects.boxsGame;
 
 public class Main {
     public static void main(String[] args) {

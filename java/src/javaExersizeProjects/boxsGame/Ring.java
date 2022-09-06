@@ -1,4 +1,4 @@
-package javaExersizeProjects.BoxsGame;
+package javaExersizeProjects.boxsGame;
 
 import java.util.Random;
 

@@ -1,4 +1,4 @@
-package javaExersizeProjects.StudentManagmentSystem;
+package javaExersizeProjects.studentManagmentSystem;
 
 public class Main {
 

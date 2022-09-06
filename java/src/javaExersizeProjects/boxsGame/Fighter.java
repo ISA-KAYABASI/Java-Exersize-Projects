@@ -1,4 +1,4 @@
-package javaExersizeProjects.BoxsGame;
+package javaExersizeProjects.boxsGame;
 
 public class Fighter {
     String name;
