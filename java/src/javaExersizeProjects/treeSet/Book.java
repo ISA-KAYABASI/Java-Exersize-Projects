@@ -1,4 +1,4 @@
-package javaExersizeProjects.treeMap;
+package javaExersizeProjects.treeSet;
 
 public class Book implements Comparable<Book> {
 
