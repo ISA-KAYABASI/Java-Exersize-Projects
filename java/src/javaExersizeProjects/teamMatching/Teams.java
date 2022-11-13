@@ -3,8 +3,6 @@ package javaExersizeProjects.teamMatching;
 import java.util.*;
 
 public class Teams {
-
-    public class Teams {
         List<String> teamList = new LinkedList<>();
 
 
@@ -115,4 +113,4 @@ the last item is deleted from the list .The list scrolls to the right.*/
         }
 
 }
-}
+
