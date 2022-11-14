@@ -33,6 +33,4 @@ public class Main {
         newList.forEach(book -> System.out.println("Book name :\t" + book.getName() + ", \t Kitabin yazari:\t" + book.getAuthor()));
 
     }
-
-
 }
